@@ -3,3 +3,9 @@ Podfile.lock
 *.DS_Store 
 
 buildtimes.log
+
+tessdata/*
+
+VisionDemo/tessdata/eng.traineddata
+
+VisionDemo/tessdata/chi_sim.traineddata

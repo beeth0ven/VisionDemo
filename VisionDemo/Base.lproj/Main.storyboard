@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,30 +21,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw4-z6-MOk">
-                                <rect key="frame" x="16" y="319.5" width="343" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-nK-rgT">
+                                <rect key="frame" x="16" y="116" width="343" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Nw4-z6-MOk" firstAttribute="leading" secondItem="3XK-DD-tDS" secondAttribute="leading" constant="16" id="fnG-X0-gxN"/>
-                            <constraint firstItem="Nw4-z6-MOk" firstAttribute="centerY" secondItem="3XK-DD-tDS" secondAttribute="centerY" id="hla-oj-z2H"/>
-                            <constraint firstAttribute="trailing" secondItem="Nw4-z6-MOk" secondAttribute="trailing" constant="16" id="uWD-tA-9jq"/>
+                            <constraint firstItem="s0A-nK-rgT" firstAttribute="trailing" secondItem="3XK-DD-tDS" secondAttribute="trailingMargin" id="7Xx-de-BUO"/>
+                            <constraint firstItem="s0A-nK-rgT" firstAttribute="top" secondItem="4A1-h6-1hI" secondAttribute="bottom" constant="52" id="N8c-me-4Tn"/>
+                            <constraint firstItem="s0A-nK-rgT" firstAttribute="leading" secondItem="3XK-DD-tDS" secondAttribute="leadingMargin" id="p6n-JH-fNZ"/>
+                            <constraint firstItem="evK-zA-Vfl" firstAttribute="top" secondItem="s0A-nK-rgT" secondAttribute="bottom" constant="8" symbolic="YES" id="xdE-zs-KAL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WGG-ZT-Rvv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="I4q-RM-Tya"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="g8N-Ft-rPp"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="label" destination="Nw4-z6-MOk" id="IgD-4J-m5P"/>
+                        <outlet property="textView" destination="s0A-nK-rgT" id="6Sm-m6-ETm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93a-9e-FtJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="123.68815592203899"/>
+            <point key="canvasLocation" x="221.59999999999999" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vqi-d1-EzY">
@@ -56,12 +59,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vaf-dG-Xqb" kind="relationship" relationship="rootViewController" id="Yks-Ka-ccu"/>
+                        <segue destination="vaf-dG-Xqb" kind="relationship" relationship="rootViewController" id="SAj-p6-nnz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzY-fB-RGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271" y="124"/>
+            <point key="canvasLocation" x="-553" y="124"/>
         </scene>
     </scenes>
 </document>

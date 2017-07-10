@@ -14,6 +14,7 @@
 		4516A8671F0C716500F4480F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4516A8661F0C716500F4480F /* Assets.xcassets */; };
 		4516A86A1F0C716500F4480F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4516A8681F0C716500F4480F /* LaunchScreen.storyboard */; };
 		4516A8721F0C71D700F4480F /* CanGetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516A8711F0C71D700F4480F /* CanGetImage.swift */; };
+		452C0F9E1F13329B00AC0482 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 452C0F9D1F13329B00AC0482 /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		4516A86B1F0C716500F4480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4516A8711F0C71D700F4480F /* CanGetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanGetImage.swift; sourceTree = "<group>"; };
 		45231547978F56A5C3E6C5C7 /* Pods-VisionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisionDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisionDemo/Pods-VisionDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		452C0F6C1F0F1FCA00AC0482 /* VisionDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VisionDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		452C0F9D1F13329B00AC0482 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = ../../../../../Downloads/tessdata; sourceTree = "<group>"; };
 		4ACF6100167CF091889FF807 /* Pods_VisionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VisionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,7 +78,9 @@
 				4516A8611F0C716500F4480F /* ViewController.swift */,
 				4516A8711F0C71D700F4480F /* CanGetImage.swift */,
 				4516A8631F0C716500F4480F /* Main.storyboard */,
+				452C0F9D1F13329B00AC0482 /* tessdata */,
 				4516A8731F0C752500F4480F /* SupportingFiles */,
+				452C0F6C1F0F1FCA00AC0482 /* VisionDemo-Bridging-Header.h */,
 			);
 			path = VisionDemo;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				TargetAttributes = {
 					4516A85B1F0C716500F4480F = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -161,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4516A86A1F0C716500F4480F /* LaunchScreen.storyboard in Resources */,
+				452C0F9E1F13329B00AC0482 /* tessdata in Resources */,
 				4516A8671F0C716500F4480F /* Assets.xcassets in Resources */,
 				4516A8651F0C716500F4480F /* Main.storyboard in Resources */,
 			);
@@ -358,11 +365,15 @@
 			baseConfigurationReference = 45231547978F56A5C3E6C5C7 /* Pods-VisionDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6BDKUNMM63;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VisionDemo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.beeth0ven.VisionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VisionDemo/VisionDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,11 +384,14 @@
 			baseConfigurationReference = 311DCD0903CEFE57B5A8C69A /* Pods-VisionDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6BDKUNMM63;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VisionDemo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.beeth0ven.VisionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VisionDemo/VisionDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
